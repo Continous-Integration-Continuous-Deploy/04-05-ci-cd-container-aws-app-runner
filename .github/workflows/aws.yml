@@ -60,18 +60,15 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+  deploy:
+      name: Deploy
+      runs-on: ubuntu-latest
+      environment: production
 
-
-    
- deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    environment: production
-
-    steps:
+  steps:
      - name: Print AWS Region
        run: echo "AWS Region:${{ env.AWS_REGION }}"
-       
+      
      - name: Checkout
        uses: actions/checkout@v3
 
