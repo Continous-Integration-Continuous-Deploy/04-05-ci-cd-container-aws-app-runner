@@ -1,4 +1,4 @@
-name: "3-Deployment"
+name: "integrate-python-app"
 on:
   workflow_call:
     inputs:
