@@ -44,10 +44,27 @@ permissions:
   contents: read
 
 jobs:
-  deploy:
+   login:
+    name: Docker login
+    runs-on : ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Log into Docker registry
+      if: github.event_name != 'pull_request'
+      uses: docker/login-action@v2.1.0
+      with:
+       registry: ${{ env.REGISTRY }}
+       username: ${{ github.actor }}
+       password: ${{ secrets.GITHUB_TOKEN }}
+
+   deploy:
     name: Deploy
     runs-on: ubuntu-latest
     environment: production
+    needs: login
 
     steps:
     - name: Checkout
