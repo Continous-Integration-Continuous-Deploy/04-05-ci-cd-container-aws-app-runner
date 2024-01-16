@@ -23,8 +23,6 @@ env:
 jobs:
   integration:
     uses: ./.github/workflows/integrate-python-app.yml
-    with:
-     environment: production
     permissions:
       contents: read
 
