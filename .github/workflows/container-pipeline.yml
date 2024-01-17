@@ -18,7 +18,9 @@ env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ github.repository }}
+  REPO_NAME: 04_05_CI_CD_Container_AWS_App_Runner
+  IMAGE_NAME: ${{ env.REPO_NAME }}
+  #IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   integration:
