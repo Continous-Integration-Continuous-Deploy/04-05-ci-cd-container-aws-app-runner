@@ -17,10 +17,10 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  username: ${{ github.actor }} 
-  password: ${{ secrets.GITHUB_TOKEN }}
+  username: ${{ secrets.AWS_USERNAME }} 
+  password: ${{ secrets.AWS_PASSWORD }}
    
-  IMAGE_NAME: k2k1n2c5/04-05-ci-cd-container-aws-app-runner
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build:
