@@ -17,13 +17,16 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: k2k1n2c5/04-05-ci-cd-container-aws-app-runner
+  username: ${{ github.actor }} 
+  password: ${{ secrets.GITHUB_TOKEN }}
+   
+  IMAGE_NAME: 04-05-ci-cd-container-aws-app-runner
 
 jobs:
   build:
     environment:
       name: ${{ inputs.environment }}
-      url: public.ecr.aws/k2k1n2c5/04-05-ci-cd-container-aws-app-runner
+      url: ${{env.IMAGE_NAME}}
     runs-on: ubuntu-latest
     permissions:
       packages: read
