@@ -27,6 +27,7 @@ jobs:
       environment: Production
     permissions:
       contents: read
+      packages: read
 
   delivery:
     needs: [integration]
