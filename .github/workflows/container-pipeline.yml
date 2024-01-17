@@ -21,7 +21,7 @@ env:
   password: ${{ secrets.GITHUB_TOKEN }}
   # github.repository as <account>/<repo>
   #REPO_NAME: 04_05_CI_CD_Container_AWS_App_Runner
-  IMAGE_NAME: 04-05-ci-cd-container-aws-app-runner
+  IMAGE_NAME: k2k1n2c5/04-05-ci-cd-container-aws-app-runner
   #IMAGE_NAME: 04-05-ci-cd-container-aws-app-runner
 
 jobs:
