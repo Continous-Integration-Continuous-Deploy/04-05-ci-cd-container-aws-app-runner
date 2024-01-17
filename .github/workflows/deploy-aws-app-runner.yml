@@ -23,7 +23,7 @@ jobs:
   build:
     environment:
       name: ${{ inputs.environment }}
-      url: ${{lower(vars.URL) }}
+      url: ${{ github.toJSON(vars.URL).toLowerCase() }}
     runs-on: ubuntu-latest
     permissions:
       packages: read
