@@ -23,7 +23,7 @@ jobs:
   build:
     environment:
       name: ${{ inputs.environment }}
-      url: ${{ vars.URL }}
+      url: public.ecr.aws/k2k1n2c5/04-05-ci-cd-container-aws-app-runner
     runs-on: ubuntu-latest
     permissions:
       packages: read
